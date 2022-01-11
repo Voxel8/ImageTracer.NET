@@ -33,4 +33,4 @@ jobs:
 
     - name: Publish
       if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/')
-      run: dotnet nuget push ImageTracerNet\bin\Release\*.nupkg --source ${{ env.RepositoryUrl }} --api-key ${{ secrets.GITHUB_TOKEN }} --skip-duplicate --no-symbols true
+      run: dotnet nuget push ImageTracerNet\bin\Release\*.nupkg --source ${{ env.RepositoryUrl }} --api-key ${{ secrets.NUGETTOKEN }} --skip-duplicate --no-symbols true
